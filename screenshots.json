@@ -1,8 +1,8 @@
 {
   "suites": {
     "Introduction": {
-      "screenshots": [
-        [
+      "screenshots": {
+        "BackendUsers": [
           {
             "action": "resizeWindow",
             "width": 1024,
@@ -127,19 +127,83 @@
             "action": "click",
             "link": "List"
           },
-          {"action": "openPageTreePath", "path": []},
-
+          {
+            "action": "openPageTreePath",
+            "path": []
+          },
           {
             "action": "switchToContentFrame"
           },
-          {"action": "scrollModuleBodyTo", "toSelector": "#t3-table-be_users"},
+          {
+            "action": "scrollModuleBodyTo",
+            "toSelector": "#t3-table-be_users"
+          },
           {
             "action": "makeScreenshotOfWindow",
             "fileName": "BeUsersList",
             "captionText": "Viewing backend users in the List module"
           }
+        ],
+        "BackendUserRights": [
+          {
+            "action": "resizeWindow",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "action": "setScreenshotsImagePath",
+            "path": "Images/BackendUserRights"
+          },
+          {
+            "action": "setScreenshotsRstPath",
+            "path": "Images/BackendUserRights"
+          },
+          {
+            "action": "setScreenshotsDefaultTable",
+            "table": "be_groups"
+          },
+          {
+            "action": "setScreenshotsDefaultUid",
+            "uid": {
+              "action": "getUidByField",
+              "table": "be_groups",
+              "field": "title",
+              "value": "Advanced editors"
+            }
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "explicit_allowdeny",
+            "fileName": "BeGroupEditAllowDeny",
+            "captionText": "Setting permissions for values of the content type field"
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "db_mountpoints",
+            "fileName": "BeGroupEditDBMounts",
+            "captionText": "Choosing DB mounts for the group"
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "non_exclude_fields",
+            "fileName": "BeGroupEditExcludeFields",
+            "captionText": "The list of excluded fields in its default state (all tables collapsed)"
+          },
+          {
+            "action": "goToField",
+            "fields": "non_exclude_fields"
+          },
+          {
+            "action": "click",
+            "link": "#data_be_groups_3_non_exclude_fields-group-2 .panel-heading a"
+          },
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "BeGroupEditExcludeFieldsExpanded",
+            "captionText": "The same list with one table expanded"
+          }
         ]
-      ]
+      }
     },
     "Styleguide": {
       "screenshots": {}
