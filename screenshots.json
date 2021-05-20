@@ -164,12 +164,7 @@
           },
           {
             "action": "setScreenshotsDefaultUid",
-            "uid": {
-              "action": "getUidByField",
-              "table": "be_groups",
-              "field": "title",
-              "value": "Advanced editors"
-            }
+            "uid": 5
           },
           {
             "action": "makeScreenshotOfField",
@@ -195,12 +190,35 @@
           },
           {
             "action": "click",
-            "link": "#data_be_groups_3_non_exclude_fields-group-2 .panel-heading a"
+            "link": "Card"
           },
+          {"action": "wait", "timeout": 0.1},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "BeGroupEditExcludeFieldsExpanded",
+            "selector": ".form-section",
             "captionText": "The same list with one table expanded"
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "file_mountpoints",
+            "fileName": "BeGroupEditFileMounts",
+            "captionText": "List of all available file mounts"
+          },
+          {
+            "action": "goToField",
+            "fields": "file_permissions"
+          },
+          {
+            "action": "click",
+            "link": "Files"
+          },
+          {"action": "wait", "timeout": 0.1},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "BeGroupEditFilePermissions",
+            "selector": ".form-section",
+            "captionText": "Giving specific file operation permissions"
           }
         ]
       }
