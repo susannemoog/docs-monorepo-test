@@ -64,8 +64,7 @@ Step 2: Create the user
 Similarly to what we have done before, let's create a new
 user using the *Access* module.
 
-.. figure:: ../../Images/BackendAccessCreateNewUser.png
-   :alt: Creating a new backend user from the Access module
+.. include:: /Images/BackendUsers/BeUsersCreateNewUser.rst.txt
 
 
 Enter the username, password, group membership:

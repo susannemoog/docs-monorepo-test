@@ -1,12 +1,14 @@
 {
   "suites": {
     "Introduction": {
-      "screenshots": [
-        [
+      "screenshots": {
+        "_default": [
+          {"action": "resizeWindow", "width": 1024, "height": 768},
+          {"action": "reloadBackend"}
+        ],
+        "BackendUsers": [
           {
-            "action": "resizeWindow",
-            "width": 1024,
-            "height": 768
+            "include": "_default"
           },
           {
             "action": "setScreenshotsImagePath",
@@ -127,19 +129,42 @@
             "action": "click",
             "link": "List"
           },
-          {"action": "openPageTreePath", "path": []},
-
+          {
+            "action": "openPageTreePath",
+            "path": []
+          },
           {
             "action": "switchToContentFrame"
           },
-          {"action": "scrollModuleBodyTo", "toSelector": "#t3-table-be_users"},
+          {
+            "action": "scrollModuleBodyTo",
+            "toSelector": "#t3-table-be_users"
+          },
           {
             "action": "makeScreenshotOfWindow",
             "fileName": "BeUsersList",
             "captionText": "Viewing backend users in the List module"
           }
+        ],
+        "SetUpBackendUser": [
+          {"include": "_default"},
+          {"action": "setScreenshotsImagePath", "path": "Images/BackendUsers"},
+          {"action": "setScreenshotsRstPath", "path": "Images/BackendUsers"},
+          {"action": "see", "text": "Backend Users"},
+          {"action": "click", "link": "Backend Users"},
+          {"action": "switchToContentFrame"},
+          {"action": "waitForText", "text": "Backend User Listing", "timeout": 5},
+          {"action": "drawBox", "selector": "a[title=\"Create new record\"]"},
+          {"action": "drawArrow", "selector": "a[title=\"Create new record\"]", "position": "right-middle"},
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "BeUsersCreateNewUser",
+            "altText": "Creating a new backend user from the Access module",
+            "captionText": "Creating a new backend user from the Access module"
+          },
+          {"action": "clearDrawings"}
         ]
-      ]
+      }
     },
     "Styleguide": {
       "screenshots": {}
