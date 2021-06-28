@@ -21,15 +21,13 @@ Step 1: Create a new group
 
 Let's create a new user group using the *Access* module.
 
-.. figure:: ../../Images/BackendAccessCreateNewGroup.png
-   :alt: Creating a new backend group from the Access module
+.. include:: /Images/BackendUsers/BeUsersCreateNewGroup.rst.txt
 
 
 Start by entering the name ("Resource editors"), optionally
 a description and choose "All users" as sub-group.
 
-.. figure:: ../../Images/BackendAccessNewGroupGeneralTab.png
-   :alt: Entering the general information about the new group
+.. include:: /Images/BackendUsers/BeUsersCreateNewGroupGeneralTab.rst.txt
 
 
 Let's keep things simple for the further permissions. Try to do

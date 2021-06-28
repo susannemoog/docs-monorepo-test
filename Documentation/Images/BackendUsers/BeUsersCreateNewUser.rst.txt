@@ -1,7 +1,7 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
 .. figure:: /Images/BackendUsers/BeUsersCreateNewUser.png
-   :alt: Creating a new backend group from the Access module
+   :alt: Creating a new backend user from the Access module
    :class: with-shadow
 
-   Creating a new backend group from the Access module
+   Creating a new backend user from the Access module

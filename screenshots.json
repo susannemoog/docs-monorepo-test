@@ -154,8 +154,29 @@
           {"action": "click", "link": "Backend Users"},
           {"action": "switchToContentFrame"},
           {"action": "waitForText", "text": "Backend User Listing", "timeout": 5},
+          {"action": "selectOption", "select": "BackendUserModuleMenu", "option": "Backend user groups"},
+          {"action": "waitForText", "text": "Backend User Group Listing", "timeout": 5},
+          {"action": "drawBox", "selector": "[name=\"BackendUserModuleMenu\"]"},
           {"action": "drawBox", "selector": "a[title=\"Create new record\"]"},
           {"action": "drawArrow", "selector": "a[title=\"Create new record\"]", "position": "right-middle"},
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "BeUsersCreateNewGroup",
+            "altText": "Creating a new backend group from the Access module",
+            "captionText": "Creating a new backend group from the Access module"
+          },
+          {"action": "click", "link": "a[title=\"Create new record\"]"},
+          {"action": "waitForText", "text": "Create new Backend usergroup", "timeout": 5},
+          {"action": "fillField", "field": "input[data-formengine-input-name$=\"[title]\"]", "value": "Resource editors"},
+          {"action": "selectOption", "select": "select[data-relatedfieldname$=\"[subgroup]\"]", "option": "All users"},
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "BeUsersCreateNewGroupGeneralTab",
+            "altText": "Entering the general information about the new group",
+            "captionText": "Entering the general information about the new group"
+          },
+          {"action": "click", "link": "Mounts and Workspaces"},
+          {"action": "waitForText", "text": "DB Mounts", "timeout": 5},
           {
             "action": "makeScreenshotOfWindow",
             "fileName": "BeUsersCreateNewUser",
