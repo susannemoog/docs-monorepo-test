@@ -1,5 +1,83 @@
 {
   "suites": {
+
+    "Core": {
+      "screenshots": {
+        "AdminTool": [
+          {
+            "action": "setScreenshotsImagePath",
+            "path": "Images/AutomaticScreenshots/AdminTools"
+          },
+          {
+            "action": "setScreenshotsRstPath",
+            "path": "Images/AutomaticScreenshots/AdminTools"
+          },
+          {
+            "action": "resizeWindow",
+            "width": 1232,
+            "height": 768
+          },
+          {"action": "switchToMainFrame"},
+          {"action": "waitForElement", "element": "button#web"},
+          {"action": "click", "link": "button#web"},
+          {"action": "waitForElement", "element": "button#site"},
+          {"action": "click", "link": "button#site"},
+          {"action": "waitForElement", "element": "button#file"},
+          {"action": "click", "link": "button#file"},
+          {"action": "waitForElement", "element": "button#system"},
+          {"action": "click", "link": "button#system"},
+          {"action": "see", "text": "Maintenance"},
+          {"action": "click", "link": "Maintenance"},
+          {"action": "switchToContentFrame"},
+          {"action": "fillField", "field": "input#confirmationPassword", "value": "password"},
+          {"action": "click", "link": "Confirm"},
+          {"comment": "********************************************************"},
+          {"comment": "Maintenance Section of Admin Tool"},
+          {"comment": "********************************************************"},
+          {"action": "waitForText", "text": "Maintenance", "timeout": 5},
+          {
+            "action": "resizeWindow",
+            "width": 1024,
+            "height": 512
+          },
+          {
+            "action": "wait",
+            "timeout": "1"
+          },
+          {"action":  "scrollModuleBodyTo", "toSelector":  "button[data-require='TYPO3/CMS/Install/Module/Maintenance/LanguagePacks']"},
+          {"action": "drawArrow", "selector": "button[data-require='TYPO3/CMS/Install/Module/Maintenance/LanguagePacks']", "position": "right-middle"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "ManageLanguage",
+            "altText": "Manage language packs",
+            "captionText": "Open the backend language administration module"
+          },
+          {"action": "clearDrawings"},
+          {"action":  "Click", "link":  "Manage languages"},
+          {
+            "action": "waitForModalDialogInMainFrame"
+          },
+          {
+            "action": "click",
+            "link": "Add language"
+          },
+          {"action": "see", "text": "Afrikaans"},
+          {"action": "switchToMainFrame"},
+          {"action":  "drawBox", "selector":  ".t3js-languagePacks-mainContent"},
+          {"action":  "drawBox", "selector":  "a[data-iso=af]"},
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "ManageLanguagePacksAddLanguage",
+            "altText": "Add a language",
+            "captionText": "Add the desired language"
+          },
+          {
+            "action": "click",
+            "link": "button.t3js-modal-close"
+          }
+        ]
+      }
+    },
     "Introduction": {
       "screenshots": [
         [
@@ -33,9 +111,6 @@
             "selector": "#system_BeuserTxBeuser",
             "label": "1",
             "position": "right"
-          },
-          {
-            "action": "switchToContentFrame"
           },
           {
             "action": "waitForText",
