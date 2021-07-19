@@ -14,7 +14,7 @@ about each record and gives you the ability edit several records with
 one action.
 To enable this feature, select the table header (1):
 
-.. figure:: /Images/ManualScreenshots/ListModule//AdditionalFields.png
+.. figure:: /Images/ManualScreenshots/ListModule/AdditionalFields.png
    :alt: The List view with an additional field displayed
    :class: with-shadow
 
@@ -34,7 +34,7 @@ Edit all headers
 To edit the headers of all records in one go,
 select the pencil icon next to the "Header" label:
 
-.. figure:: /Images/ManualScreenshots/ListModule//EditAllHeaders.png
+.. figure:: /Images/ManualScreenshots/ListModule/EditAllHeaders.png
    :alt: The button to edit a given field for all records
    :class: with-shadow
 
