@@ -1,0 +1,230 @@
+{
+  "suites": {
+    "Introduction": {
+      "screenshots": {
+        "BackendUsers": [
+          {
+            "action": "resizeWindow",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "action": "setScreenshotsImagePath",
+            "path": "Images/BackendUsers"
+          },
+          {
+            "action": "setScreenshotsRstPath",
+            "path": "Images/BackendUsers"
+          },
+          {
+            "action": "see",
+            "text": "Backend Users"
+          },
+          {
+            "action": "click",
+            "link": "Backend Users"
+          },
+          {
+            "action": "drawBox",
+            "selector": "#system_BeuserTxBeuser"
+          },
+          {
+            "action": "drawBadge",
+            "selector": "#system_BeuserTxBeuser",
+            "label": "1",
+            "position": "right"
+          },
+          {
+            "action": "switchToContentFrame"
+          },
+          {
+            "action": "waitForText",
+            "text": "Backend User Listing",
+            "timeout": 5
+          },
+          {
+            "action": "drawBox",
+            "selector": ".t3-js-jumpMenuBox"
+          },
+          {
+            "action": "drawArrow",
+            "selector": ".t3-js-jumpMenuBox",
+            "position": "right-bottom"
+          },
+          {
+            "action": "drawBadge",
+            "selector": ".t3-js-jumpMenuBox",
+            "label": "2",
+            "position": "right"
+          },
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "BeUsersModule",
+            "altText": "Screenshot of the Backend User Module",
+            "captionText": "SYSTEM > Backend users"
+          },
+          {
+            "action": "clearDrawings"
+          },
+          {
+            "action": "drawBox",
+            "selector": "a[title=\"Switch to user\"]"
+          },
+          {
+            "action": "drawArrow",
+            "selector": "a[title=\"Switch to user\"]",
+            "position": "left-top"
+          },
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "BeUserSimulate",
+            "selector": "#typo3-backend-user-list",
+            "altText": "'Simulate User' in backend user module",
+            "captionText": "The last action icon lets us simulate another user"
+          },
+          {
+            "action": "click",
+            "link": "a[title=\"Switch to user\"]"
+          },
+          {
+            "action": "switchToMainFrame"
+          },
+          {
+            "action": "see",
+            "text": "SU editor"
+          },
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "SimpleEditorUser",
+            "captionText": "The backend view for the \"simple\\_editor\""
+          },
+          {
+            "action": "click",
+            "link": "SU editor"
+          },
+          {
+            "action": "see",
+            "text": "Exit"
+          },
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "BeUsersSimulateExit",
+            "captionText": "Exiting the backend user simulation"
+          },
+          {
+            "action": "click",
+            "link": "Exit"
+          },
+          {
+            "action": "see",
+            "text": "List"
+          },
+          {
+            "action": "click",
+            "link": "List"
+          },
+          {
+            "action": "click",
+            "link": "List"
+          },
+          {
+            "action": "openPageTreePath",
+            "path": []
+          },
+          {
+            "action": "switchToContentFrame"
+          },
+          {
+            "action": "scrollModuleBodyTo",
+            "toSelector": "#t3-table-be_users"
+          },
+          {
+            "action": "makeScreenshotOfWindow",
+            "fileName": "BeUsersList",
+            "captionText": "Viewing backend users in the List module"
+          }
+        ],
+        "BackendUserRights": [
+          {
+            "action": "resizeWindow",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "action": "setScreenshotsImagePath",
+            "path": "Images/BackendUserRights"
+          },
+          {
+            "action": "setScreenshotsRstPath",
+            "path": "Images/BackendUserRights"
+          },
+          {
+            "action": "setScreenshotsDefaultTable",
+            "table": "be_groups"
+          },
+          {
+            "action": "setScreenshotsDefaultUid",
+            "uid": 5
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "explicit_allowdeny",
+            "fileName": "BeGroupEditAllowDeny",
+            "captionText": "Setting permissions for values of the content type field"
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "db_mountpoints",
+            "fileName": "BeGroupEditDBMounts",
+            "captionText": "Choosing DB mounts for the group"
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "non_exclude_fields",
+            "fileName": "BeGroupEditExcludeFields",
+            "captionText": "The list of excluded fields in its default state (all tables collapsed)"
+          },
+          {
+            "action": "goToField",
+            "fields": "non_exclude_fields"
+          },
+          {
+            "action": "click",
+            "link": "Card"
+          },
+          {"action": "wait", "timeout": 0.1},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "BeGroupEditExcludeFieldsExpanded",
+            "selector": ".form-section",
+            "captionText": "The same list with one table expanded"
+          },
+          {
+            "action": "makeScreenshotOfField",
+            "fields": "file_mountpoints",
+            "fileName": "BeGroupEditFileMounts",
+            "captionText": "List of all available file mounts"
+          },
+          {
+            "action": "goToField",
+            "fields": "file_permissions"
+          },
+          {
+            "action": "click",
+            "link": "Files"
+          },
+          {"action": "wait", "timeout": 0.1},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "BeGroupEditFilePermissions",
+            "selector": ".form-section",
+            "captionText": "Giving specific file operation permissions"
+          }
+        ]
+      }
+    },
+    "Styleguide": {
+      "screenshots": {}
+    }
+  }
+}
